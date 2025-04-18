@@ -4,7 +4,7 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)  
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-orange.svg)](https://www.mysql.com/)  
 
-A data analytics project that loads e-commerce CSV data into MySQL using Python, then performs powerful SQL and Python-based analysis to extract business insights.
+A data analytics project that loads e-commerce CSV data into MySQL using Python, then performs powerful SQL and Python-based analysis to extract business insights.This is a learning project in which I have solved 15 SQL problem easy to advance sql queries.I had taken a help of chat.openai.com for learning some algorithms.The Dataset has taken from Kaggle's site.
 
 ---
 
@@ -35,13 +35,20 @@ It includes:
 
 ---
 
-##  Setup Instructions
+## 🧪 Conda Virtual Environment for Jupyter
 
-1. **Clone this repo** and download the dataset into the folder `SQL-Python-Ecommerce-Project-main`.
+To ensure environment reproducibility and smooth Jupyter Notebook integration, it's recommended to use a **Conda virtual environment**.
 
-2. **Create a MySQL database**:
-   ```sql
-   CREATE DATABASE ecommerce;
+### 🔧 Steps:
+
+1. **Create a conda environment**:
+   ```bash
+   conda create -n ecommerce_env python=3.8
+   ```
+
+2. **Activate the environment**:
+   ```bash
+   conda activate ecommerce_env
    ```
 
 3. **Install dependencies**:
@@ -49,14 +56,29 @@ It includes:
    pip install -r requirements.txt
    ```
 
-4. **Run the data loader**:  
+4. **Add the environment to Jupyter**:
+   ```bash
+   python -m ipykernel install --user --name ecommerce_env --display-name "Python (ecommerce_env)"
+   ```
+
+Now you can select `Python (ecommerce_env)` as the kernel in Jupyter Notebook.
+
+---
+
+5. **Clone this repo** and download the dataset into the folder `SQL-Python-Ecommerce-Project-main`.
+
+6. **Create a MySQL database**:
+   ```sql
+   CREATE DATABASE ecommerce;
+   ```
+   
+7. **Run the data loader**:  
    Update credentials in `csv_to_sql.py` and run:
    ```bash
    python csv_to_sql.py
    ```
 
 ---
-
 ## 📊 Analysis Overview
 
 Analysis is performed in the `ecommerce.ipynb` notebook using SQL queries and Python visualization libraries.
