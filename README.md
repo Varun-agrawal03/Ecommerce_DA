@@ -98,4 +98,4 @@ Analysis is performed in the `ecommerce.ipynb` notebook using SQL queries and Py
 
 ---
 
-> Built with ❤️ by *Your Name*
+> Built by **VARUN**
